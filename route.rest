@@ -1,0 +1,41 @@
+#To run tests. NOTE: Three #'s are needed to separate the get & post calls
+GET http://localhost:3005/subscribers
+
+###
+
+POST http://localhost:3005/subscribers
+content-type: application/json
+
+{
+  "name": "Anon",
+  "subscribedClinic": "Anon's clinic"
+}
+
+###
+
+GET http://localhost:3000/subscribers/<the_id>
+#the id is generated out of the object posted by the function below
+
+###
+
+DELETE http://localhost:3000/subscribers/<the_id>
+#Use the id to delete content
+
+###
+
+POST http://localhost:3005/subscribers
+Content-Type: application/json
+
+{
+  "name": "Anon",
+  "subscribedClinic": "Anon's whatever"
+}
+
+###
+
+PATCH http://localhost:3005/subscribers/<the_id>
+Content-Type: application/json 
+
+{
+  "name": "Nona"
+}
