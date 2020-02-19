@@ -1,0 +1,66 @@
+#To run tests. NOTE: Three #'s are needed to separate the get & post calls
+
+#-------------------------CLINICS-------------------------------------#
+GET http://localhost:3005/subscribers
+
+###
+
+POST http://localhost:3005/subscribers
+content-type: application/json
+
+{
+  "name": "Valentino",
+  "subscribedClinic": "Valenclinic",
+  "clinicType": "clinic",
+  "timeline": ["a section","another one"]
+}
+
+###
+
+GET http://localhost:3005/subscribers/5e4ab23bc625a2c66efbcd7b
+#the id is generated out of the object posted by the function below
+
+###
+
+DELETE http://localhost:3005/subscribers/5e28337ff72ea2464a2443d9
+#Use the id to delete content
+
+###
+
+POST http://localhost:3005/subscribers
+Content-Type: application/json
+
+{
+  "name": "Anon",
+  "subscribedClinic": "Anon's whatever",
+  "clinicType": "pizzeria"
+}
+
+###
+
+PUT http://localhost:3005/subscribers/5e28334e0c9aa7460da65236
+Content-Type: application/json 
+
+{
+  "name": "Valentina",
+  "subscribedClinic": "pizzeria superiorissimamento",
+  "timeline": ["pizza..?"]
+}
+
+###
+
+#-------------------------TIMELINES-------------------------------------#
+
+GET http://localhost:3005/timelines
+
+###
+
+POST http://localhost:3005/timelines
+content-type: application/json
+
+{
+  "title": "timeline 2"
+}
+
+###
+

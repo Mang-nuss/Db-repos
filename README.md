@@ -7,5 +7,7 @@ namely:
     2. In server.js, lines 13-14, there are now both one .connect() and one .createConnection() call. To be honest, I
     don't know about the relation between these two.
 
+As of feb 18th, the main task is to connect another db using the same connection call.
+
 To be continued, ...
 Magnus
